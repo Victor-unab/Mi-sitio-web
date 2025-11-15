@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional - Periodismo y Locución</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de Tailwind para usar la fuente Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-media': '#0f4c81', // Azul oscuro profesional
+                        'secondary-accent': '#ffc300', // Amarillo vibrante para acentos
+                        'text-dark': '#333333',
+                        'bg-light': '#f4f7f9',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para un mejor flujo visual */
+        .section-padding {
+            padding: 4rem 0;
+        }
+        .icon-lg {
+            width: 3rem;
+            height: 3rem;
+        }
+        .shadow-hover:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+            transition: all 0.3s ease-in-out;
+        }
+        /* Clase para simular el audio player de locución */
+        .audio-player-mock {
+            background-color: #e2e8f0;
+            border-radius: 9999px;
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: #4a5568;
+            border: 1px solid #cbd5e0;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-text-dark bg-white">
+
+    <!-- Navbar/Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <a href="#" class="text-2xl font-bold text-primary-media tracking-tight">
+                [NOMBRE DEL ESTUDIANTE]
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="#inicio" class="text-text-dark hover:text-primary-media transition duration-150">Inicio</a>
+                <a href="#perfil" class="text-text-dark hover:text-primary-media transition duration-150">Perfil</a>
+                <a href="#trabajos" class="text-text-dark hover:text-primary-media transition duration-150">Portafolio</a>
+                <a href="#contacto" class="text-text-dark hover:text-primary-media transition duration-150">Contacto</a>
+            </nav>
+            <!-- Menú hamburguesa para móvil (no funcional, solo estético) -->
+            <button class="md:hidden p-2 rounded-lg text-primary-media hover:bg-bg-light transition">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sección Hero/Inicio -->
+    <section id="inicio" class="section-padding bg-bg-light border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Columna de Texto -->
+            <div class="space-y-6">
+                <span class="inline-block px-4 py-1 text-sm font-semibold rounded-full bg-secondary-accent text-primary-media">
+                    Locutor y Periodista en Formación
+                </span>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight text-primary-media">
+                    Conectando historias.
+                    <span class="block text-text-dark">Con impacto y voz propia.</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-lg">
+                    Estudiante de Comunicación Social y Periodismo con dominio en la redacción de informes
+                    e investigación, y una sólida experiencia práctica en técnicas de locución y producción radial.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#trabajos" class="bg-primary-media text-white px-6 py-3 rounded-xl font-semibold shadow-md hover:bg-opacity-90 transition duration-300">
+                        Ver Portafolio Escrito
+                    </a>
+                    <a href="#locucion" class="border border-primary-media text-primary-media px-6 py-3 rounded-xl font-semibold hover:bg-primary-media hover:text-white transition duration-300">
+                        Escuchar Demos de Voz
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna de Imagen (Placeholder) -->
+            <div class="flex justify-center md:justify-end">
+                <div class="w-full max-w-sm h-80 bg-gray-300 rounded-3xl shadow-xl overflow-hidden flex items-center justify-center text-center text-gray-500 p-4">
+                    [Imagen de Estudiante Periodista/Locutor, Profesional y Sonriente]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Perfil y Habilidades (Enfoque Dual) -->
+    <section id="perfil" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary-media">Mi Perfil Profesional</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Periodismo y Universidad -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100 shadow-hover">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-lg text-primary-media mb-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18m-2.25-10.5H12m-2.25 0H6m-1.5 0H4.5m18 0a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25M12 18V6" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-3">Formación Periodística</h3>
+                    <p class="text-gray-600">
+                        Cursando [Nombre de la Universidad], enfocado en investigación de datos, ética periodística y
+                        redacción para medios digitales.
+                    </p>
+                    <ul class="mt-4 text-sm space-y-1">
+                        <li class="font-medium text-text-dark">Especialidad: Investigación y Crónica.</li>
+                        <li class="font-medium text-text-dark">Logros: Publicaciones en la revista universitaria.</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 2: Experiencia en Locución -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100 shadow-hover">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-lg text-secondary-accent mb-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 6v-1.5m-6 1.5a6 6 0 0 1 6-6v-1.5m6 7.5h.008v.008h-.008v-.008Zm0-3h.008v.008h-.008V15Zm0-3h.008v.008h-.008V12Zm0-3h.008v.008h-.008V9Zm-12 3a6 6 0 0 1 6-6V4.5m-6 7.5v-1.5m-6 1.5a6 6 0 0 0 6-6V4.5M12 18.75a4.5 4.5 0 0 0 4.5-4.5v-1.5m-4.5 6v-1.5m-4.5 1.5a4.5 4.5 0 0 1 4.5-4.5v-1.5" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-3">Dominio de la Voz y el Audio</h3>
+                    <p class="text-gray-600">
+                        Habilidades adquiridas en [Experiencia/Curso de Locución], con versatilidad en tonos informativos, comerciales y narrativos.
+                    </p>
+                    <ul class="mt-4 text-sm space-y-1">
+                        <li class="font-medium text-text-dark">Habilidades: Doblaje, Lectura de Noticias, Podcast.</li>
+                        <li class="font-medium text-text-dark">Equipo: Edición básica de audio (Adobe Audition/Audacity).</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta 3: Habilidades Transversales -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100 shadow-hover">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-lg text-primary-media mb-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75m9.375-7.5H21M12 18.75h3.75m-3.75 3h3.375c.621 0 1.125-.504 1.125-1.125V21m-4.125 0V9.75m-3 7.5a6 6 0 1 1 0-12 6 6 0 0 1 0 12ZM4.5 18.75h3.375c.621 0 1.125-.504 1.125-1.125V21m-4.125 0V9.75m7.5 0h-3.75m-9.375 7.5H3M12 21h3.375c.621 0 1.125-.504 1.125-1.125V21m-4.125 0V9.75m7.5 0h-3.75m-9.375 7.5H3M12 21h3.375c.621 0 1.125-.504 1.125-1.125V21m-4.125 0V9.75m7.5 0h-3.75" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-3">Competencias Clave</h3>
+                    <p class="text-gray-600">
+                        Capacidad demostrada para trabajar bajo presión, realizar entrevistas de calidad y adaptarse a plataformas multimedia.
+                    </p>
+                    <ul class="mt-4 text-sm space-y-1">
+                        <li class="font-medium text-text-dark">Software: Suite Adobe (Premiere/Audition).</li>
+                        <li class="font-medium text-text-dark">Idiomas: [Especifique su nivel o idioma].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Portafolio de Trabajos Escritos -->
+    <section id="trabajos" class="section-padding bg-bg-light border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-text-dark">Portafolio Escrito (Prensa y Web)</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Artículo 1: Investigación -->
+                <div class="bg-white rounded-xl shadow-lg shadow-hover overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-secondary-accent uppercase">Investigación</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-3 text-primary-media">El Impacto de la IA en la Educación Superior</h3>
+                        <p class="text-gray-600 line-clamp-3">
+                            Análisis a profundidad sobre cómo las herramientas de inteligencia artificial están redefiniendo
+                            los métodos de enseñanza y el rol del profesorado en [Nombre de la Ciudad].
+                        </p>
+                        <a href="#" class="mt-4 inline-block text-sm font-semibold text-primary-media hover:underline">
+                            Leer Artículo Completo &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artículo 2: Entrevista/Crónica -->
+                <div class="bg-white rounded-xl shadow-lg shadow-hover overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-secondary-accent uppercase">Crónica</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-3 text-primary-media">La Vida después del Desastre: Historias de Resiliencia</h3>
+                        <p class="text-gray-600 line-clamp-3">
+                            Crónica conmovedora basada en entrevistas a los afectados por el reciente [Nombre del Evento],
+                            destacando la reconstrucción comunitaria.
+                        </p>
+                        <a href="#" class="mt-4 inline-block text-sm font-semibold text-primary-media hover:underline">
+                            Leer Artículo Completo &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artículo 3: Periodismo Digital -->
+                <div class="bg-white rounded-xl shadow-lg shadow-hover overflow-hidden">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-secondary-accent uppercase">Análisis Político</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-3 text-primary-media">Tendencias de Voto Juvenil en las Próximas Elecciones</h3>
+                        <p class="text-gray-600 line-clamp-3">
+                            Cobertura y análisis de las encuestas y el discurso político dirigido a la población menor de 25 años,
+                            con foco en las redes sociales.
+                        </p>
+                        <a href="#" class="mt-4 inline-block text-sm font-semibold text-primary-media hover:underline">
+                            Ver Reportaje Multimedia &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Locución y Audio Demos -->
+    <section id="locucion" class="section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12 text-primary-media">Demos de Locución y Audio</h2>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+                Una muestra de mi versatilidad de voz, ideal para proyectos de radio, podcast, narración de videos o spots publicitarios.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Demo 1: Tono Informativo (Noticiero) -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-primary-media/20 shadow-hover">
+                    <h3 class="text-2xl font-semibold mb-3">Noticiero y Periodístico</h3>
+                    <p class="text-gray-600 mb-4">Voz clara, firme y neutral, ideal para la lectura de titulares e informes de última hora.</p>
+                    <div class="audio-player-mock">
+                        <span>Demo 1: Tono Formal</span>
+                        <button class="text-primary-media ml-4 p-2 rounded-full hover:bg-white transition">
+                            <!-- Icono de Play -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                <path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11V15.89a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Demo 2: Tono Narrativo (Podcast/Audiolibro) -->
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-primary-media/20 shadow-hover">
+                    <h3 class="text-2xl font-semibold mb-3">Narración y Podcast</h3>
+                    <p class="text-gray-600 mb-4">Voz cálida y expresiva para documentales, audiolibros o la introducción de segmentos de podcast.</p>
+                    <div class="audio-player-mock">
+                        <span>Demo 2: Tono Conversacional</span>
+                        <button class="text-primary-media ml-4 p-2 rounded-full hover:bg-white transition">
+                            <!-- Icono de Play -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                <path d="M6.3 2.841A1.5 1.5 0 0 0 4 4.11V15.89a1.5 1.5 0 0 0 2.3 1.269l9.344-5.89a1.5 1.5 0 0 0 0-2.538L6.3 2.84Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="[Enlace a su Soundcloud/Drive/Demos Completos]" target="_blank" class="text-lg font-semibold text-secondary-accent hover:underline">
+                    Ver más muestras de audio en [Plataforma] &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section-padding bg-primary-media text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4">Hablemos de tu Proyecto</h2>
+            <p class="text-center text-xl mb-12 opacity-80">
+                ¿Necesitas un redactor con enfoque investigativo o una voz profesional para tu próxima producción?
+            </p>
+
+            <form action="[URL_DE_PROCESAMIENTO_DE_FORMULARIO]" method="POST" class="space-y-6">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium mb-1">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required class="w-full p-3 rounded-lg text-text-dark focus:ring-secondary-accent focus:border-secondary-accent border-gray-300">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-1">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required class="w-full p-3 rounded-lg text-text-dark focus:ring-secondary-accent focus:border-secondary-accent border-gray-300">
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje (Describa su solicitud)</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required class="w-full p-3 rounded-lg text-text-dark focus:ring-secondary-accent focus:border-secondary-accent border-gray-300"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-secondary-accent text-primary-media font-bold py-3 rounded-xl shadow-lg hover:bg-opacity-90 transition duration-300">
+                    Enviar Mensaje
+                </button>
+            </form>
+
+            <div class="mt-12 text-center border-t border-white/20 pt-6">
+                <p class="text-lg font-semibold mb-2">Información Directa</p>
+                <p>Email: <a href="mailto:tunombre@mail.com" class="hover:underline">tunombre@mail.com</a></p>
+                <p>Teléfono: <a href="tel:+525512345678" class="hover:underline">[+XX] XXX XXX XX XX</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-dark p-6 text-center text-white text-sm">
+        <p>&copy; 2025 [NOMBRE DEL ESTUDIANTE]. Periodista y Locutor. Todos los derechos reservados.</p>
+        <div class="flex justify-center space-x-4 mt-3">
+            <!-- Iconos de Redes Sociales (Placeholders) -->
+            <a href="[LinkedIn]" target="_blank" class="text-white hover:text-secondary-accent transition">LinkedIn</a>
+            <a href="[Twitter/X]" target="_blank" class="text-white hover:text-secondary-accent transition">Twitter/X</a>
+            <a href="[Instagram]" target="_blank" class="text-white hover:text-secondary-accent transition">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
